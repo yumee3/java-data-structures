@@ -1,6 +1,8 @@
-import datastructures.interfaces.ITab;
-import datastructures.queue.Queue;
-import datastructures.stack.Stack;
+package datastructures;
+
+import datastructures.interfaces.IContainer;
+import datastructures.queue.ArrayQueue;
+import datastructures.stack.ArrayStack;
 
 public class Main {
 
@@ -9,7 +11,7 @@ public class Main {
         // =============================
         //           STACK DEMO
         // =============================
-        ITab<Integer> stack = new Stack<>();
+        IContainer<Integer> stack = new ArrayStack<>();
 
         // Push elements onto the stack
         stack.addItem(1);
@@ -22,14 +24,14 @@ public class Main {
         stack.removeItem();
         System.out.println("Last element removed from stack: " + stack.removeItem());
 
-        System.out.println("\ndatastructures.stack.Stack content:");
+        System.out.println("\nStack content:");
         stack.display();
 
 
         // =============================
         //           QUEUE DEMO
         // =============================
-        ITab<Integer> queue = new Queue<>();
+        IContainer<Integer> queue = new ArrayQueue<>();
 
         // Enqueue elements
         queue.addItem(1);
@@ -49,7 +51,7 @@ public class Main {
         queue.addItem(8);
         queue.addItem(9);
 
-        System.out.println("\ndatastructures.queue.Queue content:");
+        System.out.println("\nQueue content:");
         queue.display();
     }
 }
