@@ -2,14 +2,14 @@ package datastructures.queue;
 
 import datastructures.interfaces.IContainer;
 
-public class ArraQueue<E> implements IContainer<E> {
+public class ArrayQueue<E> implements IContainer<E> {
 
     E[] tab;
     int size;
     int in;
     int out;
 
-    public ArraQueue()
+    public ArrayQueue()
     {
         this.tab = (E[]) new Object[5];
         size = in = out = 0;
