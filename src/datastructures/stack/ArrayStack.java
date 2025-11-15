@@ -2,12 +2,12 @@ package datastructures.stack;
 
 import datastructures.interfaces.IContainer;
 
-public class Stack<E> implements IContainer<E> {
+public class ArrayStack<E> implements IContainer<E> {
 
     E[] tab;
     int size;
 
-    public Stack()
+    public ArrayStack()
     {
         this.tab = (E[]) new Object[5];
         size = 0;
