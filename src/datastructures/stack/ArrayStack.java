@@ -27,7 +27,7 @@ public class ArrayStack<E> implements IContainer<E> {
     @Override
     public E removeItem()
     {
-        if (size < 0)
+        if (size == 0)
         {
             return null;
         }
