@@ -1,5 +1,6 @@
 package datastructures;
 
+import datastructures.doublyLinkedList.DoublyLinkedList;
 import datastructures.interfaces.IContainer;
 import datastructures.queue.ArrayQueue;
 import datastructures.stack.ArrayStack;
@@ -53,5 +54,40 @@ public class Main {
 
         System.out.println("\nQueue content:");
         queue.display();
+
+        // =============================
+        //    DOUBLY LINKED LIST DEMO
+        // =============================
+        DoublyLinkedList<Integer> dllInt = new DoublyLinkedList<>();
+
+        // Fill with integers
+        dllInt.addFirst(1);
+        dllInt.addFirst(2);
+        dllInt.addFirst(3);
+        dllInt.addLast(8);
+        dllInt.addLast(9);
+
+        // Remove from first until empty
+        System.out.print("\nDoublyLinkedList (from first): ");
+        while (!dllInt.isEmpty()) {
+            System.out.print(dllInt.removeFirst() + " ");
+        }
+
+        // New list with Strings
+        DoublyLinkedList<String> dllStr = new DoublyLinkedList<>();
+
+        dllStr.addFirst("Ana");
+        dllStr.addFirst("Bob");
+        dllStr.addFirst("Cloe");
+        dllStr.addLast("Ryan");
+        dllStr.addLast("Sam");
+
+        // Remove from last until empty
+        System.out.print("\nDoublyLinkedList (from last): ");
+        while (!dllStr.isEmpty()) {
+            System.out.print(dllStr.removeLast() + " ");
+        }
+        System.out.println();
+
     }
 }
