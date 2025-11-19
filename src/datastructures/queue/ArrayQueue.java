@@ -16,7 +16,8 @@ public class ArrayQueue<E> implements IContainer<E> {
     private int out;
 
     @SuppressWarnings("unchecked")
-    public ArrayQueue() {
+    public ArrayQueue()
+    {
         this.tab = (E[]) new Object[5];
         this.size = 0;
         this.in = 0;
@@ -27,8 +28,10 @@ public class ArrayQueue<E> implements IContainer<E> {
      * Enqueues an element at the end of the queue.
      */
     @Override
-    public void addItem(E item) {
-        if (size == tab.length) {
+    public void addItem(E item)
+    {
+        if (size == tab.length)
+        {
             resize();
         }
         tab[in] = item;
@@ -42,8 +45,10 @@ public class ArrayQueue<E> implements IContainer<E> {
      * @return the removed element, or null if empty
      */
     @Override
-    public E removeItem() {
-        if (size == 0) {
+    public E removeItem()
+    {
+        if (size == 0)
+        {
             return null;
         }
         E value = tab[out];
@@ -58,11 +63,13 @@ public class ArrayQueue<E> implements IContainer<E> {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public void resize() {
+    public void resize()
+    {
         int oldLength = tab.length;
         E[] newTab = (E[]) new Object[oldLength * 2];
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++)
+        {
             newTab[i] = tab[(out + i) % oldLength];
         }
 
@@ -75,8 +82,10 @@ public class ArrayQueue<E> implements IContainer<E> {
      * Displays the queue content in FIFO order.
      */
     @Override
-    public void display() {
-        for (int i = 0; i < size; i++) {
+    public void display()
+    {
+        for (int i = 0; i < size; i++)
+        {
             System.out.println(tab[(out + i) % tab.length]);
         }
     }
