@@ -5,9 +5,9 @@ This repository contains the data structures I implement in Java for my universi
 ## Implemented
 - Stack
 - Queue
+- DoublyLinkedList
 
 ## Upcoming
-- LinkedList
 - HashTable
 - Trees
 - Graphs
