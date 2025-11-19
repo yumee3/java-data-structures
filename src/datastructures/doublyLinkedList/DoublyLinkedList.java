@@ -2,8 +2,17 @@ package datastructures.doublyLinkedList;
 
 import datastructures.interfaces.IDoublyLinkedList;
 
+/**
+ * Implementation of a doubly linked list.
+ * Supports insertion and removal from both ends.
+ *
+ * @param <E> the type of elements stored in the list
+ */
 public class DoublyLinkedList<E> implements IDoublyLinkedList<E> {
 
+    /**
+     * Internal node class storing value and links to neighbors.
+     */
     class Node {
         E value;
         Node next;
@@ -84,4 +93,3 @@ public class DoublyLinkedList<E> implements IDoublyLinkedList<E> {
         return first == null;
     }
 }
-
