@@ -2,18 +2,25 @@ package datastructures.stack;
 
 import datastructures.interfaces.IContainer;
 
+/**
+ * Array-based implementation of a stack (LIFO).
+ *
+ * @param <E> the type of elements stored in the stack
+ */
 public class ArrayStack<E> implements IContainer<E> {
 
-    E[] tab;
-    int size;
+    private E[] tab;
+    private int size;
 
-    public ArrayStack()
-    {
+    @SuppressWarnings("unchecked")
+    public ArrayStack() {
         this.tab = (E[]) new Object[5];
-        size = 0;
+        this.size = 0;
     }
 
-
+    /**
+     * Pushes an element onto the top of the stack.
+     */
     @Override
     public void addItem(E item)
     {
@@ -24,6 +31,11 @@ public class ArrayStack<E> implements IContainer<E> {
         tab[size++] = item;
     }
 
+    /**
+     * Removes and returns the last pushed element (top of the stack).
+     *
+     * @return the removed element, or null if empty
+     */
     @Override
     public E removeItem()
     {
@@ -34,6 +46,10 @@ public class ArrayStack<E> implements IContainer<E> {
         return tab[--size];
     }
 
+    /**
+     * Doubles the capacity of the internal array.
+     */
+    @SuppressWarnings("unchecked")
     @Override
     public void resize()
     {
@@ -45,6 +61,9 @@ public class ArrayStack<E> implements IContainer<E> {
         tab = newTab;
     }
 
+    /**
+     * Displays stack contents from bottom to top.
+     */
     @Override
     public void display()
     {
