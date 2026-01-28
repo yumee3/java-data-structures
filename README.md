@@ -6,8 +6,8 @@ This repository contains the data structures I implement in Java for my universi
 - Stack
 - Queue
 - DoublyLinkedList
+- Binary Search Tree
 
 ## Upcoming
-- HashTable
-- Trees
-- Graphs
+- N-ary tree
+- Graphs (Adjacency List, Adjacency Matrix)
